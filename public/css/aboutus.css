@@ -1,0 +1,18 @@
+.pane {
+    display: inline-block;
+    width: 42%;
+    height: 85vh;
+    margin-top: 9vh;
+    background: inherit;
+    background: black;
+}
+
+.left {
+    margin-right: 4.75%;
+    margin-left: 3%;
+}
+
+.right {
+    margin-left: 4.75%;
+    margin-right: 3%;
+}

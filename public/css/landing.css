@@ -1,0 +1,54 @@
+.welcome {
+    z-index: 0;
+    width: 30%;
+    padding-left: 7.5%;
+    padding-top: 7.5%;
+}
+
+.welcome span {
+    color: #787878;
+    font-size: 48px;
+    width: 100%;
+}
+
+.abstractdiv {
+    display: inline-block;
+    width: 40%;
+    height: auto;
+    padding-left: 15%;
+    padding-right: 10%;
+    padding-top: 5%;
+}
+
+.abstractdiv p, .whowearediv, .whowearediv span {
+    font-family: Helvetica, "Trebuchet MS", sans-serif;
+    color: #787878;
+}
+
+.whowearediv {
+    margin-top: 15%;
+    vertical-align: top;
+    display: inline-block;
+    width: 30%;
+    height: auto;
+    font-size: 36px;
+    overflow: hidden;
+    background: black;
+    
+}
+
+.whowearediv span {
+    text-align: center;
+}
+
+.slidebox {
+    height: 100%;
+    z-index: 1;
+    border: 5px dashed #080B14;
+}
+
+.slidebox span {
+    z-index: 0;
+    width: 100%;
+    text-align: center;
+}

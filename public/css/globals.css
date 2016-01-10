@@ -9,6 +9,11 @@ ul {
     -webkit-padding-start: 0px;
 }
 
+.navtext {
+    font-family: Helvetica, "Trebuchet MS", sans-serif;
+    color: #e3e5ff;
+}
+
 .holder {
     background: #13151A;
     width: 100%;
@@ -51,7 +56,6 @@ ul {
     display: inline-block;
     vertical-align: middle;
     text-decoration: none;
-    color: #e3e5ff;
 }
 
 .footer {
@@ -75,7 +79,6 @@ ul {
 }
 
 .addons li a, span {
-    font-family: Helvetica, "Trebuchet MS", sans-serif;
     line-height: 3vh;
     height: 100%;
     width: 100%;

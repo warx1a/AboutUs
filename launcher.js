@@ -3,9 +3,9 @@ var fs = require("fs");
 
 //handlebars elements
 var elements = {
-    "navigation": '<div class="navdiv"><ul class="navigation"><li><a href="/" class="navtext">Home</a></li> <li><a href="/html/aboutus.html" class="navtext">About Us</a></li><li><a href="/projects" class="navtext">Projects</a></li><li><a href="contact" class="navtext">Contact Us</a></li></ul></div>'
+    "navigation": '<div class="navdiv"><ul class="navigation"><li><a href="/" class="navtext">Home</a></li> <li><a href="/aboutus" class="navtext">About Us</a></li><li><a href="/projects" class="navtext">Projects</a></li><li><a href="contact" class="navtext">Contact Us</a></li></ul></div>'
     ,
-    "footer": '<div class="footer"><ul class="addons"><li><a href="http://www.google.com" class="navtext">View Our Source Code</a> </li> <li> <span class="navtext">Made By Hunter and Luke</span></li></ul></div>'
+    "footer": '<div class="footer"><ul class="addons"><li><a href="https://github.com/warx1a/AboutUs" class="navtext">View Our Source Code</a> </li> <li> <span class="navtext">Made By Hunter and Luke</span></li></ul></div>'
 };
 
 //placeholder for the html files

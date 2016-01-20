@@ -1,4 +1,5 @@
 var restify = require("restify"), handlebars = require("handlebars");
+var parser = require("./util/FileParser.js");
 var fs = require("fs");
 
 //handlebars elements
@@ -35,9 +36,16 @@ function init(callback) {
         if(err) {
             console.log(err);
         } else {
-            var template = handlebars.compile(data);
-            var result = template(elements);
-            files["aboutus"] = result;
+            fs.readFile(__dirname + "/public/static/LukeBio.rtf", "utf8", function(err,bio) {
+                if(err) {
+                    console.log(err);
+                } else {
+                    elements["lukebio"] = parser.parseBio(bio);
+                    var template = handlebars.compile(data);
+                    var result = template(elements);
+                    files["aboutus"] = result;
+                }
+            });
         }
     });
     callback();
@@ -58,6 +66,7 @@ init(function() {
         res.end();
         return next();
     });
+
     // catch-all for static content
     server.get(/.*/, restify.serveStatic({
         directory: "./public"

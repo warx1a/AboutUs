@@ -1,3 +1,5 @@
+"use strict";
+
 var verbs = ["Leaders", "Invested", "Multifaceted", "Adaptive", "Motivated", "The Future"];
 
 var idx = 0;

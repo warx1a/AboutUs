@@ -49,6 +49,7 @@
     width: 64%;
     height: 100%;
     padding-right: 5%;
+    padding-left: 1%;
 }
 
 .profilepic img {
@@ -60,7 +61,7 @@
 
 .hobbies {
     height: 100%;
-    width: 31%;
+    width: 30%;
 }
 
 .hobbylist {
@@ -68,5 +69,10 @@
 }
 
 .hobbylist li {
-    color: blue;
+    color: #787878;
+}
+
+.hobbyelem, .bio {
+    font-family: Helvetica, "Trebuchet MS", sans-serif;
+    color: #787878;;
 }

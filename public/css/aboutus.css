@@ -32,7 +32,7 @@
     line-height: 60px;
     vertical-align: middle;
     text-align: center;
-    color: blue;
+    color: #aa9fae;
 }
 
 .imagehobby {
@@ -75,4 +75,29 @@
 .hobbyelem, .bio {
     font-family: Helvetica, "Trebuchet MS", sans-serif;
     color: #787878;;
+}
+
+.biodiv {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.networkicon {
+    width: 75px;
+    height: 75px;
+}
+
+.networking {
+    width: 100%;
+}
+
+.whiteout {
+    background: white;
+}
+
+.networking div {
+    text-align: center;
+    display: inline-block;
+    width: 33.33%;
+    height: 100%;
 }

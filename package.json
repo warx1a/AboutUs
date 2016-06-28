@@ -5,6 +5,11 @@
     "handlebars":"4.0.5"
   },
   "scripts" : {
-    "start" : "/launcher.js"
-  }
+    "start" : "/launcher.js",
+    "web" : "node launcher.js"
+  },
+  "engines" : "0.10.28",
+  "version" : "1.0.0",
+  "main" : "launcher.js",
+  "description" : "About us page for Luke Jensen & Hunter Robb"
 }

@@ -1,6 +1,10 @@
 {
+  "name" : "AboutUs",
   "dependencies": {
     "restify":"4.0.3",
     "handlebars":"4.0.5"
+  },
+  "scripts" : {
+    "start" : "/launcher.js"
   }
 }

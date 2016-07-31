@@ -6,7 +6,8 @@
 }
 
 .welcome span {
-    color: #787878;
+    font-family: "Rage";
+    color: #f1ff00;
     font-size: 48px;
     width: 100%;
 }
@@ -18,10 +19,11 @@
     padding-left: 15%;
     padding-right: 10%;
     padding-top: 5%;
+    font-family: "Arkhip", Helvetica, "Trebuchet MS", sans-serif;
 }
 
 .abstractdiv p, .whowearediv, .whowearediv span {
-    font-family: Helvetica, "Trebuchet MS", sans-serif;
+    font-family: "Nexa", Helvetica, "Trebuchet MS", sans-serif;
     color: #787878;
 }
 
@@ -34,6 +36,7 @@
     font-size: 36px;
     overflow: hidden;
     background: black;
+    font-family: "Nexa", Helvetica, "Trebuchet MS", sans-serif;
     
 }
 

@@ -1,3 +1,23 @@
+@font-face {
+    font-family: "Rage";
+    src: url("/font/RoadRage.otf");
+}
+
+@font-face {
+    font-family: "Arkhip";
+    src: url("/font/Arkhip.otf");
+}
+
+@font-face {
+    font-family: "Cornerstone";
+    src: url("/font/Cornerstone.ttf");
+}
+
+@font-face {
+    font-family: "Nexa";
+    src: url("/font/NexaBF.otf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +30,15 @@ ul {
 }
 
 .navtext {
-    font-family: Helvetica, "Trebuchet MS", sans-serif;
+    font-family: "Nexa", Helvetica, "Trebuchet MS", sans-serif;
     color: #e3e5ff;
 }
-
+/*13151A*/
 .holder {
     background: #13151A;
     width: 100%;
-    height: auto;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .navdiv, .footer {
@@ -49,7 +70,6 @@ ul {
 }
 
 .navigation li a {
-    font-family: Helvetica, "Trebuchet MS", sans-serif;
     line-height: 35px;
     height: 100%;
     width: 100%;
@@ -91,7 +111,6 @@ ul {
 .bottombar {
     height: 3vh;
     width: 100%;
-    padding-top: 3%;
 }
 
 .tab {

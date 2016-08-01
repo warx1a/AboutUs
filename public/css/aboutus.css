@@ -59,8 +59,9 @@ body {
 }
 
 .skills {
+    padding-top: 1.5%;
     width: 80%;
-    height: 40%;
+    height: 35%;
     color: #e3e5ff;
     text-align: center;
 }
@@ -81,11 +82,42 @@ body {
 
 .accomplishments {
     width: 80%;
-    height: 60%;
+    height: 40%;
     text-align: center;
 }
 
 .accomplishments span {
     height: auto;
     width: auto;
+}
+
+.links {
+    height: 25%;
+    width: 80%;
+}
+
+.link {
+    width: auto;
+    height: 20%;
+    color: #7d7d7d;
+    font-size: 110%;
+}
+
+.frame {
+    text-align: center;
+    display: inline-block;
+    width: 32%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.iconspot {
+    width: 80%;
+    height: 80%;
+}
+
+.iconspot img {
+    padding-top: 5%;
+    width: 60%;
+    height: 60%;
 }

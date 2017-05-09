@@ -10,7 +10,7 @@ var elements = {
     ,
     "title" : "About Me",
     "twdesc": "This program will auto-attack villages for you using your troops. It will cycle between the villages you own as troops are exhausted.",
-    "kawdesc": "This program analyzes Kingdoms At War allies and calulates the best composite score as a ratio of stats to price of ally. Guaranteed to flip allies quickly."};
+    "kawdesc": "This program analyzes Kingdoms At War allies and calulates the best composite score as a ratio of stats to price of the ally. Guaranteed to flip allies quickly."};
 
 //placeholder for the html files
 var files = {};

@@ -1,0 +1,80 @@
+.project {
+    height: 50%;
+    width: 100%;
+}
+
+.projecttitle{
+    font-family: "Rage", Helvetica, sans-serif;
+    padding-top: 4%;
+    padding-left: 3%;
+    font-size: 150%;
+    color: rgb(198,182,148);
+    width: 100%;
+    height: 5%;
+}
+
+.KAWtitle {
+    font-family: "Rage", Helvetica, sans-serif;
+    padding-top: 2%;
+    padding-left: 3%;
+    padding-bottom: 1%;
+    font-size: 150%;
+    color: rgb(198,182,148);
+    width: 100%;
+    height: 5%;
+}
+
+.projectinfo {
+    font-family: "Arkhip", Helvetica, "Trebuchet MS", sans-serif;
+    color: white;
+    font-size: 120%;
+    padding-left: 3%;
+    width: 70%;
+    height: 75%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.projectdesc {
+    height: 20%;
+    width: 100%;
+}
+
+.twfeatures {
+    vertical-align: top;
+    width: 49%;
+    height: 79%;
+    display: inline-block;
+}
+
+.twfeatures li {
+    text-align: center;
+    padding: 1%;
+}
+
+.twfeaturestitle {
+    color: #7d7d7d;
+    text-align: center;
+    width: 100%;
+    height: 10%;
+}
+
+.TWpreview {
+    padding-left: 5%;
+    padding-top: 1%;
+    display: inline-block;
+    width: 20%;
+    height: auto;
+}
+
+.KAWpreview {
+    padding-left: 5%;
+    padding-top: 1%;
+    display: inline-block;
+    width: 15%;
+    height: auto;
+}
+
+.proj2 {
+    background: red;
+}

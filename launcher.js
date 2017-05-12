@@ -1,5 +1,4 @@
 var restify = require("restify"), handlebars = require("handlebars");
-var parser = require("./util/FileParser.js");
 var fs = require("fs");
 
 //handlebars elements
@@ -9,6 +8,9 @@ var elements = {
     "footer": '<div class="footer"><ul class="addons"><li><a href="https://github.com/warx1a/AboutUs" class="navtext">View The Source Code</a> </li> <li> <span class="navtext">Made By Luke Jensen</span></li></ul></div>'
     ,
     "title" : "About Me",
+    "age": 19,
+    "gradelevel": "sophomore",
+    "school": "the University of Nebraska - Lincoln",
     "twdesc": "This program will auto-attack villages for you using your troops. It will cycle between the villages you own as troops are exhausted.",
     "kawdesc": "This program analyzes Kingdoms At War allies and calulates the best composite score as a ratio of stats to price of the ally. Guaranteed to flip allies quickly."};
 
@@ -57,11 +59,13 @@ function init(callback) {
         if(err) {
             console.log(err);
         } else {
-            fs.readFile(__dirname + "/public/static/LukeBio.rtf", "utf8", function(err,bio) {
+            fs.readFile(__dirname + "/public/static/LukeBio.txt", "utf8", function(err,bio) {
                 if(err) {
                     console.log(err);
                 } else {
-                    elements["lukebio"] = parser.parseBio(bio);
+                    var tempbio = handlebars.compile(bio);
+                    var biography = tempbio(elements);
+                    elements["lukebio"] = biography;
                     var template = handlebars.compile(data);
                     var result = template(elements);
                     files["aboutus"] = result;

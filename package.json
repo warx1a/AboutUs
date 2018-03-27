@@ -9,7 +9,9 @@
     "start" : "node launcher.js",
     "web" : "node launcher.js"
   },
-  "engines" : "0.10.28",
+  "engines" : {
+    "node" : "6.11.1"
+  },
   "version" : "1.0.0",
   "main" : "launcher.js",
   "description" : "About us page for Luke Jensen & Hunter Robb"

@@ -2,7 +2,8 @@
   "name" : "AboutUs",
   "dependencies": {
     "restify":"4.0.3",
-    "handlebars":"4.0.5"
+    "handlebars":"4.0.5",
+    "mysql": "2.15.0"
   },
   "scripts" : {
     "start" : "node launcher.js",

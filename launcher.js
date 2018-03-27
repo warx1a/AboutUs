@@ -1,6 +1,8 @@
 var restify = require("restify"), handlebars = require("handlebars");
 var fs = require("fs");
 
+var login = require("./db/login.js");
+
 //handlebars elements
 var elements = {
     "navigation": '<div class="navdiv"><ul class="navigation"><li><a href="/" class="navtext">Home</a></li> <li><a href="/about" class="navtext">About Me</a></li><li><a href="/projects" class="navtext">Projects</a></li><li><a href="/contact" class="navtext">Contact Me</a></li></ul></div>'
@@ -102,6 +104,15 @@ init(function() {
     server.get("/contact", function(req,res,next) {
         res.header("Content-Type", "text/html");
         res.write(files.contact);
+        res.end();
+        return next();
+    });
+
+    server.get("/login/:username/:password", function(req,res,next) {
+        res.header("Content-Type", "application/json");
+        console.log(req.params);
+        login.checkLogin(req.params.username, req.params.password);
+        res.write("ok");
         res.end();
         return next();
     });

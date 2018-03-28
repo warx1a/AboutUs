@@ -15,10 +15,11 @@ function checkLogin(username, password,res) {
         if(err) {
             console.log(err);
         } else {
+            console.log(data);
             if(data.length == 1) {
-                res(0, "Success");
+                return res(0, "Success");
             } else {
-                res(1, "Invalid Login");
+                return res(1, "Invalid Login");
             }
         }
     });

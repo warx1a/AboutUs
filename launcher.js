@@ -110,11 +110,16 @@ init(function() {
 
     server.get("/login/:username/:password", function(req,res,next) {
         res.header("Content-Type", "application/json");
-        console.log(req.params);
-        login.checkLogin(req.params.username, req.params.password);
-        res.write("ok");
-        res.end();
-        return next();
+        login.checkLogin(req.params.username, req.params.password, function(responseCode, responseMessage) {
+            var response = {
+                responseCode : responseCode,
+                responseMessage: responseMessage
+            };
+            console.log("resp:" + response);
+            res.send(response);
+            res.end();
+            return next();
+        });
     });
 
     // catch-all for static content

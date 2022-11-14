@@ -1,21 +1,14 @@
-var restify = require("restify"), handlebars = require("handlebars");
-var fs = require("fs");
+//modules
+var restify = require("restify"), handlebars = require("handlebars"), fs = require("fs");
 
 var login = require("./db/login.js");
 
 //handlebars elements
 var elements = {
-    "navigation": '<div class="navdiv"><ul class="navigation"><li><a href="/" class="navtext">Home</a></li> <li><a href="/about" class="navtext">About Me</a></li><li><a href="/projects" class="navtext">Projects</a></li><li><a href="/contact" class="navtext">Contact Me</a></li></ul></div>'
-    ,
-    "footer": '<div class="footer"><ul class="addons"><li><a href="https://github.com/warx1a/AboutUs" class="navtext">View The Source Code</a> </li> <li> <span class="navtext">Made By Luke Jensen</span></li></ul></div>'
-    ,
     "title" : "About Me",
-    "age": 19,
-    "gradelevel": "sophomore",
-    "school": "the University of Nebraska - Lincoln",
-    "twdesc": "This program will auto-attack villages for you using your troops. It will cycle between the villages you own as troops are exhausted.",
-    "kawdesc": "This program analyzes Kingdoms At War allies and calulates the best composite score as a ratio of stats to price of the ally. Guaranteed to flip allies quickly."};
-
+    "gradelevel": "Graduated From SCC Lincoln",
+    "employment": "Looking for work"
+}
 //placeholder for the html files
 var files = {};
 
@@ -24,12 +17,20 @@ var server = restify.createServer({
     version: "1.0.0"
 });
 
-server.use(restify.acceptParser(server.acceptable));
-server.use(restify.queryParser());
-server.use(restify.bodyParser());
+server.use(restify.plugins.acceptParser(server.acceptable));
+server.use(restify.plugins.queryParser());
+server.use(restify.plugins.bodyParser());
 
 //initial calling function
 function init(callback) {
+    fs.readFile(__dirname + "/public/html/templates/header.html", "utf8", function(err, data) {
+        if(err) {
+            console.log(err);
+        } else {
+            data = data.replace(/\\r\\n/, "");
+            elements["navigation"] = data;
+        }
+    });
     fs.readFile(__dirname + "/public/html/landing.html", "utf8" , function(err,data) {
         if(err) {
             console.log(err);
@@ -57,14 +58,17 @@ function init(callback) {
             files["contact"] = result;
         }
     });
+    //read the aboutus page into memory
     fs.readFile(__dirname + "/public/html/aboutus.html", "utf8" , function(err,data) {
         if(err) {
             console.log(err);
         } else {
+            //read my bio into memory
             fs.readFile(__dirname + "/public/static/LukeBio.txt", "utf8", function(err,bio) {
                 if(err) {
                     console.log(err);
                 } else {
+                    //handlebars compile
                     var tempbio = handlebars.compile(bio);
                     var biography = tempbio(elements);
                     elements["lukebio"] = biography;
@@ -110,6 +114,7 @@ init(function() {
 
     server.get("/login/:username/:password", function(req,res,next) {
         res.header("Content-Type", "application/json");
+        //admin login pannel
         login.checkLogin(req.params.username, req.params.password, function(responseCode, responseMessage) {
             var response = {
                 responseCode : responseCode,
@@ -123,10 +128,11 @@ init(function() {
     });
 
     // catch-all for static content
-    server.get(/.*/, restify.serveStatic({
+    server.get("*", restify.plugins.serveStatic({
         directory: "./public"
     }));
 
+    //listen on 80 if deployed, otherwise 3000
     server.listen(process.env.PORT || 3000,function() {
         console.log("launched");
     });

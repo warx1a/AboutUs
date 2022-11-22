@@ -23,8 +23,9 @@
     background: #2b2f3b;
     width: 30%;
     font-family: "Rage", sans-serif;
-    height: 20%;
+    height: 35%;
     border: 3px solid #000000;
+    text-align: center;
 }
 
 .contactbox a {

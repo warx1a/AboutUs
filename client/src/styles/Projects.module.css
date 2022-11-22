@@ -42,7 +42,8 @@
     margin-top: 7px;
     vertical-align: top;
     display: inline-block;
-    width: 60%;
+    width: 55%;
+    margin-right: 2%;
 }
 
 .jobinfo, .featuresandreqs {
@@ -62,29 +63,21 @@
     padding: 1%;
 }
 
-.features-title {
+.featurestitle {
     color: #7d7d7d;
     text-align: center;
     width: 100%;
     height: 10%;
 }
 
-.TWpreview {
-    padding-left: 5%;
-    padding-top: 1%;
-    display: inline-block;
-    width: 20%;
-    height: auto;
+.proj2 {
+    background: red;
 }
 
-.KAWpreview {
+.appPreviewImg {
     padding-left: 5%;
     padding-top: 1%;
     display: inline-block;
     width: 15%;
     height: auto;
-}
-
-.proj2 {
-    background: red;
 }

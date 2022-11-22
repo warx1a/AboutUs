@@ -1,18 +1,14 @@
 {
   "name": "AboutUs",
   "dependencies": {
-    "restify": "8.5.1",
+    "restify": "8.6.1",
     "handlebars": "4.7.7",
     "mysql": "2.18.1"
   },
-  "scripts": {
-    "start": "node launcher.js",
-    "web": "node launcher.js"
-  },
   "engines": {
-    "node": "6.11.1"
+    "node": "16.14.2"
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "launcher.js",
-  "description": "About us page for Luke Jensen & Hunter Robb"
+  "description": "About us page for Luther Jensen"
 }

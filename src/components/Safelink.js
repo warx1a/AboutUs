@@ -9,7 +9,7 @@ class Safelink extends Component {
 
     render() {
         return (
-            <a className={this.state.classes} href={this.state.url} rel="noreferrer" target={"_blank"}>{this.state.linktext}</a>
+            <a className={this.state.classes} href={this.state.url} rel="noreferrer" target={"_blank"}>{this.state.linktext ?? this.state.linkElement}</a>
         );
     }
 }

@@ -109,7 +109,7 @@ body {
 
 .iconspot {
     width: 80%;
-    height: 80%;
+    margin-left: 10%;
 }
 
 .iconspot img {
@@ -120,4 +120,8 @@ body {
 
 .accomplishments ul, .skills ul {
     list-style: none;
+}
+
+.linkedinFrame {
+    width: 100%;
 }

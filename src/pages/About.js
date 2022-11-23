@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Safelink from '../components/Safelink';
 import styles from '../styles/Aboutus.module.css'
 
 class About extends Component {
@@ -77,9 +78,10 @@ class About extends Component {
                                 GitHub
                             </div>
                             <div class={styles.iconspot}>
-                                <a href="https://github.com/warx1a">
-                                    <img src="/static/github.svg" alt="Link to my Github"/>
-                                </a>
+                                <Safelink
+                                    url="https://github.com/warx1a"
+                                    linkElement={<img src="/static/github.svg" alt="Link to my Github"/>}
+                                />
                             </div>
                         </div>
                         <div class={styles.frame}>
@@ -87,14 +89,21 @@ class About extends Component {
                                 Twitter
                             </div>
                             <div class={styles.iconspot}>
-                                <a href="https://twitter.com/RuthlessLuth">
-                                    <img src="/static/globe.svg" alt="Link to my Twitter"/>
-                                </a>
+                                <Safelink
+                                    url="https://twitter.com/RuthlessLuth"
+                                    linkElement={<img src="/static/globe.svg" alt="Link to my Twitter"/>}
+                                />
+                            </div>
+                        </div>
+                        <div class={styles.frame + " " + styles.linkedinFrame}>
+                            <div class={styles.link}>
+                                LinkedIn
                             </div>
                             <div class={styles.iconspot}>
-                                <a href="https://www.linkedin.com/in/luther-jensen-2749a7233/">
-                                    <img src="/static/LinkedinLogo.png" alt="Link to my Linkedin"/>
-                                </a>
+                                <Safelink 
+                                url="https://www.linkedin.com/in/luther-jensen-2749a7233/" 
+                                linkElement={<img src="/static/LILogotry3.png" alt="Link to my Linkedin"/>}
+                                />
                             </div>
                         </div>
                     </div>
